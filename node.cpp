@@ -25,7 +25,7 @@ namespace tree{
 
     template<typename k,typename v>
     node<k,v>::~node(){
-        std::cout<<"node_deleted"<<std::endl;
+        //std::cout<<"node_deleted"<<std::endl;
     }
 
     template<typename k,typename v>
