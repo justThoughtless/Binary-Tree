@@ -6,6 +6,7 @@ To compile and run:
 //to compile
 ```
 git clone https://github.com/adarsh-ee3180525/Binary-Tree.git
+cd Binary-Tree
 cmake -Bbuild -H.
 cmake --build build --target all
 ```
