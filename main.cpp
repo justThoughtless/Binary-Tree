@@ -1,7 +1,11 @@
 //
 // Created by lemme on 6/7/20.
 //
-
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
 
 #include "node.h"
 #include "btree.h"
@@ -24,7 +28,7 @@ int main(){
 //    std::cout<<tree.get_value(5)<<std::endl;
 //    std::cout<<tree.delete_node(5)<<std::endl;
 //    std::cout<<tree.delete_node(1)<<std::endl;
-    int size = 20000;
+    int size = 20;
     tree.insert_node(1,1);
     for(int i=0;i<size;i++){
         int x = rand();
@@ -33,8 +37,15 @@ int main(){
     std::vector<int> value_list = tree.inordervector();
     for(int i=0;i<value_list.size();i++){
         std::cout<<value_list[i]<<std::endl;
+        
     }
     int k = tree.size();
+    sleep(3);
+    for(int i=0;i<k;i++){
+        tree.delete_node(value_list[i]);
+        std::cout << "Deleted Node: " << i << std::endl;
+    }
+    sleep(3);
     std::cout<<k<<std::endl;
     tree.~btree();
     return 0;

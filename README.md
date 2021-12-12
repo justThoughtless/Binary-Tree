@@ -2,15 +2,14 @@
 A simple binary tree implementation in c++
 
 
-To compile and run:
-//to compile
+To compile:
 ```
 git clone https://github.com/adarsh-ee3180525/Binary-Tree.git
 cd Binary-Tree
-cmake -Bbuild -H.
+cmake -B build
 cmake --build build --target all
 ```
-//to run
+To run
 ```
 ./build/binary_tree
 ```
